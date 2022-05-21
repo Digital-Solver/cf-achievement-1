@@ -1,13 +1,13 @@
 let pokemonList = [
-    { id: 001, name: 'Bulbasaur', type: ['Grass', 'Poison'] },
-    { id: 002, name: 'Ivysaur', type: ['Grass', 'Poison'] },
-    { id: 003, name: 'Venusaur', type: ['Grass', 'Poison'] },
+    { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'] },
+    { id: 2, name: 'Ivysaur', type: ['Grass', 'Poison'] },
+    { id: 3, name: 'Venusaur', type: ['Grass', 'Poison'] },
 
-    { id: 004, name: 'Charmander', type: ['Fire'] },
-    { id: 005, name: 'Charmeleon', type: ['Fire'] },
-    { id: 006, name: 'Charizard', type: ['Fire', 'Flying'] },
+    { id: 4, name: 'Charmander', type: ['Fire'] },
+    { id: 5, name: 'Charmeleon', type: ['Fire'] },
+    { id: 6, name: 'Charizard', type: ['Fire', 'Flying'] },
 
-    { id: 007, name: 'Squirtle', type: ['Water'] },
-    { id: 008, name: 'Wartortle', type: ['Water'] },
-    { id: 009, name: 'Blastoise', type: ['Water'] },
+    { id: 7, name: 'Squirtle', type: ['Water'] },
+    { id: 8, name: 'Wartortle', type: ['Water'] },
+    { id: 9, name: 'Blastoise', type: ['Water'] },
 ];
