@@ -11,3 +11,5 @@ let pokemonList = [
     { id: 8, name: 'Wartortle', type: ['Water'] },
     { id: 9, name: 'Blastoise', type: ['Water'] },
 ];
+
+console.log(pokemonList);
