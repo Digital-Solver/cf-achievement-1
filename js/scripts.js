@@ -1,4 +1,5 @@
-alert("Hello World");
-
-var favouriteFood = "Chocolate";
-document.write(favouriteFood);
+let pokemonList = [
+    {id: 001, name: Bulbasaur, type: ['grass', 'poison']}, 
+    {id: 002, name: Ivysaur, type: ['grass', 'poison']}, 
+    {id: 003, name: Venusaur, type: ['grass', 'poison']}
+];
