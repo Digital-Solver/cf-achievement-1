@@ -14,11 +14,13 @@ let pokemonList = [
 ];
 
 // Loop goes through each object in the array and prints out its name and height to a new html tag
+let i = 0;
+
 for (i = 0; i < pokemonList.length; i++) {
     document.write(
         `<p>${pokemonList[i].name}'s height is ${pokemonList[i].height}m. `
     );
-    // Conditional statement identifies objects that fit a certain specification and highlights them by adding some bold text
+    // Highlights large pokemon by adding some bold text
     if (pokemonList[i].height >= 2) {
         document.write("<b>Wow, that's big! </b>");
     }
