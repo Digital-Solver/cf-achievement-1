@@ -12,4 +12,12 @@ let pokemonList = [
     { id: 9, name: 'Blastoise', type: ['Water'], height: 1.6 },
 ];
 
-console.log(pokemonList);
+for (i = 0; i < pokemonList.length; i++) {
+    document.write(
+        `<p>${pokemonList[i].name}'s height is ${pokemonList[i].height}m. `
+    );
+    if (pokemonList[i].height > 1.6) {
+        document.write("<b>Wow, that's big! </b>");
+    }
+    document.write('</p>');
+}
