@@ -1,3 +1,4 @@
+// This list is the data source that will be looped through later in the code.
 let pokemonList = [
     { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], height: 0.7 },
     { id: 2, name: 'Ivysaur', type: ['Grass', 'Poison'], height: 1.0 },
@@ -12,10 +13,12 @@ let pokemonList = [
     { id: 9, name: 'Blastoise', type: ['Water'], height: 1.6 },
 ];
 
+// Loop goes through each object in the array and prints out its name and height to a new html tag
 for (i = 0; i < pokemonList.length; i++) {
     document.write(
         `<p>${pokemonList[i].name}'s height is ${pokemonList[i].height}m. `
     );
+    // Conditional statement identifies objects that fit a certain specification and highlights them by adding some bold text
     if (pokemonList[i].height >= 2) {
         document.write("<b>Wow, that's big! </b>");
     }
