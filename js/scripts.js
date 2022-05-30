@@ -15,7 +15,7 @@ let pokemonRepository = (function () {
         { id: 9, name: 'Blastoise', type: ['Water'], height: 1.6 },
     ];
 
-    //The functions
+    //Functions
     function getAll() {
         return pokemonList;
     }
@@ -61,7 +61,7 @@ let pokemonRepository = (function () {
         }
     }
 
-    // The Keys
+    // Keys
     return {
         add: add,
         getAll: getAll,
