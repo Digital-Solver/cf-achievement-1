@@ -21,15 +21,41 @@ let pokemonRepository = (function () {
     }
 
     function add(pokemon) {
-        pokemonList.push(pokemon);
+        if (typeof pokemon === 'object') {
+            if (
+                Object.keys(pokemon)[0] === 'id' &&
+                Object.keys(pokemon)[1] === 'name' &&
+                Object.keys(pokemon)[2] === 'type' &&
+                Object.keys(pokemon)[3] === 'height'
+            ) {
+                pokemonList.push(pokemon);
+            } else {
+                alert(
+                    `Pokemon object must follow this format:\n
+                    id,name,type,height\n
+                    Your object has the following format:\n
+                    ${Object.keys(pokemon)}`
+                );
+            }
+        } else {
+            console.log(Object.keys(pokemon));
+            alert('This is not an Object.');
+        }
+    }
+
+    function find(query) {
+        found = pokemonList.filter(query);
     }
 
     // The Keys
     return {
         add: add,
         getAll: getAll,
+        find: find,
     };
 })();
+
+pokemonRepository.add({ id: 99, name: 'Mew', type: ['Psychic'], height: 0.2 });
 
 // Loop that prints the pokemon details to the DOM
 pokemonRepository.getAll().forEach(function (pokemon) {
