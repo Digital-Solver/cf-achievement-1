@@ -44,7 +44,21 @@ let pokemonRepository = (function () {
     }
 
     function find(query) {
-        found = pokemonList.filter(query);
+        let nameList = [];
+
+        pokemonList.forEach(function (pkmn) {
+            nameList.push(pkmn.name);
+        });
+
+        let matches = nameList.filter(function checkName(name) {
+            return name.toLocaleLowerCase() === query.toLocaleLowerCase();
+        });
+
+        if (matches.length) {
+            alert(`${query} found.\nRefresh to search again.`);
+        } else {
+            alert(`${query} not found.\nRefresh to search again.`);
+        }
     }
 
     // The Keys
