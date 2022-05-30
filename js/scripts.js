@@ -31,13 +31,11 @@ let pokemonRepository = (function () {
     };
 })();
 
-for (i = 0; i < pokemonList.length; i++) {
-    document.write(
-        `<p>${pokemonList[i].name}'s height is ${pokemonList[i].height}m. `
-    );
-    // Highlights large pokemon by adding some bold text
-    if (pokemonList[i].height >= 2) {
-        document.write("<b>Wow, that's big! </b>");
+// Loop that prints the pokemon details to the DOM
+pokemonRepository.getAll().forEach(function (pokemon) {
+    document.write(`<p>${pokemon.name}`);
+    if (pokemon.height >= 2) {
+        document.write(" - <b>Wow, that's a big Pokemon!</b>");
     }
     document.write('</p>');
-}
+});
