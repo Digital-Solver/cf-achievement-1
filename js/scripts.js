@@ -55,9 +55,9 @@ let pokemonRepository = (function () {
         });
 
         if (matches.length) {
-            alert(`${query} found.\nRefresh to search again.`);
+            alert(`${query} found.\n`);
         } else {
-            alert(`${query} not found.\nRefresh to search again.`);
+            alert(`${query} not found.\nPlease search again.`);
         }
     }
 
@@ -79,3 +79,21 @@ pokemonRepository.getAll().forEach(function (pokemon) {
     }
     document.write('</p>');
 });
+
+// IIFE that searches the pokedex using the input from the user
+let searchPokedex = (function (query) {
+    //Functions
+    function search() {
+        query = document.getElementsByClassName('pokedex__search-field')[0].value;
+        pokemonRepository.find(query);
+    }
+
+    // Keys
+    return {
+        search: search,
+    };
+})();
+
+// Add event listener to the search button to execute the searchPokedex function
+searchBtn = document.getElementsByClassName('pokedex__search-button')[0];
+searchBtn.addEventListener('click', searchPokedex.search);
