@@ -2,6 +2,9 @@
 html {
     font-family: sans-serif;
     line-height: 130%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 /* Pokemon List Stylings */
@@ -13,17 +16,21 @@ html {
 }
 
 .poke-button {
-    background-color: #ffbebe;
-    border: none;
+    background-color: rgb(53, 144, 219);
+    color: white;
+    font-weight: 500;
+    border: solid 2px rgb(53, 144, 219);
     border-radius: 4px;
-    padding: 3px;
-    margin: 3px;
-    min-width: 50%;
+    padding: 7px;
+    margin: 5px;
+    width: 95%;
 }
 
 .poke-button:hover {
-    background-color: #fc9595;
+
+    background-color: rgba(190, 31, 31);
     cursor: pointer;
+    border: solid 2px rgb(139, 0, 0);
 }
 
 /* Pokedex Styilngs */
