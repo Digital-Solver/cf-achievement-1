@@ -73,11 +73,14 @@ pokemonRepository.add({ id: 99, name: 'Mew', type: ['Psychic'], height: 0.2 });
 
 // Loop that prints the pokemon details to the DOM
 pokemonRepository.getAll().forEach(function (pokemon) {
-    document.write(`<p>${pokemon.name}`);
-    if (pokemon.height >= 2) {
-        document.write(" - <b>Wow, that's a big Pokemon!</b>");
-    }
-    document.write('</p>');
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('poke-button');
+    listItem.appendChild(button);
+    console.log(listItem);
+    pokemonList.appendChild(listItem);
 });
 
 // IIFE that searches the pokedex using the input from the user

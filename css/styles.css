@@ -4,6 +4,28 @@ html {
     line-height: 130%;
 }
 
+/* Pokemon List Stylings */
+
+.pokemon-list {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+
+.poke-button {
+    background-color: #ffbebe;
+    border: none;
+    border-radius: 4px;
+    padding: 3px;
+    margin: 3px;
+    min-width: 50%;
+}
+
+.poke-button:hover {
+    background-color: #fc9595;
+    cursor: pointer;
+}
+
 /* Pokedex Styilngs */
 .pokedex__body {
     background-color: rgb(190, 31, 31);
