@@ -61,26 +61,32 @@ let pokemonRepository = (function () {
         }
     }
 
+    function addListItem(pokemon) {
+        // Loop that prints the pokemon details to the DOM
+        let pokemonList = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('poke-button');
+        listItem.appendChild(button);
+        pokemonList.appendChild(listItem);
+    }
+
     // Keys
     return {
         add: add,
         getAll: getAll,
         find: find,
+        addListItem: addListItem,
     };
 })();
 
 pokemonRepository.add({ id: 99, name: 'Mew', type: ['Psychic'], height: 0.2 });
 
 // Loop that prints the pokemon details to the DOM
+
 pokemonRepository.getAll().forEach(function (pokemon) {
-    let pokemonList = document.querySelector('.pokemon-list');
-    let listItem = document.createElement('li');
-    let button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add('poke-button');
-    listItem.appendChild(button);
-    console.log(listItem);
-    pokemonList.appendChild(listItem);
+    pokemonRepository.addListItem(pokemon);
 });
 
 // IIFE that searches the pokedex using the input from the user
