@@ -61,13 +61,17 @@ let pokemonRepository = (function () {
         }
     }
 
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
+
     function addListItem(pokemon) {
-        // Loop that prints the pokemon details to the DOM
         let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
         let button = document.createElement('button');
         button.innerText = pokemon.name;
         button.classList.add('poke-button');
+        button.addEventListener('click', showDetails.bind(null, pokemon));
         listItem.appendChild(button);
         pokemonList.appendChild(listItem);
     }
