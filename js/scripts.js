@@ -108,5 +108,5 @@ let searchPokedex = (function (query) {
 })();
 
 // Add event listener to the search button to execute the searchPokedex function
-searchBtn = document.getElementsByClassName('pokedex__search-button')[0];
+let searchBtn = document.getElementsByClassName('pokedex__search-button')[0];
 searchBtn.addEventListener('click', searchPokedex.search);
