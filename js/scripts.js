@@ -1,6 +1,6 @@
 // Pokemon repository as an immediately invoked function expression
 let pokemonRepository = (function () {
-    // The data list of Pokemon
+    // Pokemon list
     let pokemonList = [
         { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], height: 0.7 },
         { id: 2, name: 'Ivysaur', type: ['Grass', 'Poison'], height: 1.0 },
