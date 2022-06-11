@@ -1,6 +1,7 @@
-// Pokemon repository as an immediately invoked function expression
 let pokemonRepository = (function () {
-    // Pokemon list
+    // Pokemon repository as an immediately invoked function expression
+
+    // **Data**
     let pokemonList = [
         { id: 1, name: 'Bulbasaur', type: ['Grass', 'Poison'], height: 0.7 },
         { id: 2, name: 'Ivysaur', type: ['Grass', 'Poison'], height: 1.0 },
@@ -15,7 +16,7 @@ let pokemonRepository = (function () {
         { id: 9, name: 'Blastoise', type: ['Water'], height: 1.6 },
     ];
 
-    //Functions
+    // **Functions**
     function getAll() {
         return pokemonList;
     }
@@ -76,7 +77,7 @@ let pokemonRepository = (function () {
         pokemonList.appendChild(listItem);
     }
 
-    // Keys
+    // **Keys**
     return {
         add: add,
         getAll: getAll,
@@ -85,28 +86,27 @@ let pokemonRepository = (function () {
     };
 })();
 
-pokemonRepository.add({ id: 99, name: 'Mew', type: ['Psychic'], height: 0.2 });
-
-// Loop that prints the pokemon details to the DOM
+pokemonRepository.add({ id: 99, name: 'Mew', type: ['Psychic'], height: 0.2 }); // Add a pokemon dynamically
 
 pokemonRepository.getAll().forEach(function (pokemon) {
+    // Print the pokemon details to DOM
     pokemonRepository.addListItem(pokemon);
 });
 
-// IIFE that searches the pokedex using the input from the user
 let searchPokedex = (function (query) {
-    //Functions
+    // IIFE that searches the pokedex using the input from the user
+
+    // **Functions**
     function search() {
         query = document.getElementsByClassName('pokedex__search-field')[0].value;
         pokemonRepository.find(query);
     }
 
-    // Keys
+    // **Keys**
     return {
         search: search,
     };
 })();
 
-// Add event listener to the search button to execute the searchPokedex function
-let searchBtn = document.getElementsByClassName('pokedex__search-button')[0];
+let searchBtn = document.getElementsByClassName('pokedex__search-button')[0]; // Event listener will search the pokedex
 searchBtn.addEventListener('click', searchPokedex.search);
