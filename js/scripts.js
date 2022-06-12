@@ -76,10 +76,11 @@ let pokemonRepository = (function () {
         }
     }
 
+    function showDetails(pokemon) {
+        loadDetails(pokemon).then(() => console.log(pokemon));
+    }
+
     function addListItem(pokemon) {
-        function showDetails(pokemon) {
-            loadDetails(pokemon).then(() => console.log(pokemon));
-        }
         let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
         let button = document.createElement('button');
