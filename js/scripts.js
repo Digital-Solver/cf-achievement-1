@@ -39,13 +39,13 @@ let pokemonRepository = (function () {
     }
 
     function loadDetails(item) {
-        let url = item.url;
+        let url = item.details;
         return fetch(url)
             .then((response) => {
                 return response.json();
             })
             .then((details) => {
-                item.imageURL = details.spriates.front_default;
+                item.imageURL = details.sprites.front_default;
                 item.height = details.height;
                 item.types = details.types;
             })
@@ -75,7 +75,6 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         function showDetails(pokemon) {
             loadDetails(pokemon).then(() => console.log(pokemon));
-            console.log(pokemon.name);
         }
         let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
