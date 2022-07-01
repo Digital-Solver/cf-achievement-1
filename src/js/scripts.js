@@ -57,18 +57,25 @@ const pokemonRepository = (function () {
   }
 
   function find(query) {
-    const nameList = [];
+    const foundNameList = [];
 
     pokemonList.forEach((pkmn) => {
-      nameList.push(pkmn.name);
+      foundNameList.push(pkmn.name);
     });
 
-    const matches = nameList.filter(
+    const matches = foundNameList.filter(
       (name) => name.toLocaleLowerCase() === query.toLocaleLowerCase(),
     );
 
+    const foundPokemon = document.getElementById(`${query.toLocaleLowerCase()}`);
+    function clickPokemon() {
+      foundPokemon.click();
+    }
+
     if (matches.length) {
-      alert(`${query} found.\n`);
+      foundPokemon.scrollIntoView();
+      foundPokemon.focus();
+      setTimeout(clickPokemon, 200);
     } else {
       alert(`${query} not found.\nPlease search again.`);
     }
@@ -144,6 +151,7 @@ const pokemonRepository = (function () {
     button.classList.add('list-group-item-action');
     button.setAttribute('data-toggle', 'modal');
     button.setAttribute('data-target', '#poke-modal');
+    button.setAttribute('id', pokemon.name);
 
     button.addEventListener('click', showDetails.bind(null, pokemon));
     listItem.appendChild(button);
