@@ -85,7 +85,7 @@ const pokemonRepository = (function () {
 
   function hydrateModal(name, height, types, imgURL) {
     const modal = $('.modal');
-    modal.on('hide.bs.modal', (e) => { hideModal(); });
+    modal.on('hide.bs.modal', () => { hideModal(); });
 
     const modalBody = document.querySelector('.modal-body');
     const pokemonData = document.createElement('div');
@@ -115,7 +115,7 @@ const pokemonRepository = (function () {
     for (let i = 0; i < types.length; i++) {
       const typeLabel = document.createElement('h3');
       typeLabel.classList.add('type-label');
-      typeLabel.classList.add(`--${types[i].type.name}-type`);
+      typeLabel.classList.add(`${types[i].type.name}-type`);
       typeLabel.innerText = types[i].type.name;
       typesContainer.appendChild(typeLabel);
     }

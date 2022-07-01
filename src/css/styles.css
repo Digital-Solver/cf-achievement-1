@@ -17,7 +17,7 @@ html {
 /* Background */
 body {
     min-height: 100%;
-    background-image: url("../img/background.jpg");
+    background-image: url("../../img/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -91,7 +91,8 @@ main {
 }
 
 .type-label {
-    margin-inline-end: 10px;
+    -webkit-margin-end: 10px;
+            margin-inline-end: 10px;
     border: solid 1px black;
     border-radius: 4px;
     padding: 3px;
@@ -102,71 +103,71 @@ main {
 }
 
 /* Type Colours */
-.--bug-type {
+.bug-type {
     background: #7c8500;
 }
 
-.--dragon-type {
+.dragon-type {
     background: #5b17fa;
 }
 
-.--electric-type {
+.electric-type {
     background: #d1e000;
 }
 
-.--fighting-type {
+.fighting-type {
     background: #8b1500;
 }
 
-.--fire-type {
+.fire-type {
     background: #db6300;
 }
 
-.--flying-type {
+.flying-type {
     background: #019ddb;
 }
 
-.--ghost-type {
+.ghost-type {
     background: #3a015a;
 }
 
-.--grass-type {
+.grass-type {
     background: #3f8b00;
 }
 
-.--ground-type {
+.ground-type {
     background: #E0C068;
 }
 
-.--ice-type {
+.ice-type {
     background: #98D8D8;
 }
 
-.--poison-type {
+.poison-type {
     background: #A040A0;
 }
 
-.--psychic-type {
+.psychic-type {
     background: #F85888;
 }
 
-.--rock-type {
+.rock-type {
     background: #B8A038;
 }
 
-.--water-type {
+.water-type {
     background: #6890F0;
 }
 
-.--fairy-type {
+.fairy-type {
     background: #F0B6BC;
 }
 
-.--dark-type {
+.dark-type {
     background: #705848;
 }
 
-.--steel-type {
+.steel-type {
     background: #B8B8D0;
 }
 
