@@ -53,8 +53,8 @@ A web application built with HTML, CSS, and JavaScript that loads data from an e
 For questions or feedback, you can reach me at kerr(dot)digitalsolver@gmail.com
 
 ## Resources
-[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[jQuery](https://api.jquery.com/)
+[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | 
+[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) | 
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) | 
+[jQuery](https://api.jquery.com/) | 
 [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
