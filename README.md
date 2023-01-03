@@ -48,6 +48,10 @@ A web application built with HTML, CSS, and JavaScript that loads data from an e
 4. Click on a Pokémon to view more details in a modal
 5. Close the modal by clicking on the close button or outside of the modal window
 
+## License
+
+This project is licensed under the terms of the MIT license. See the LICENSE file for more information.
+
 ## Contact
 
 For questions or feedback, you can reach me at kerr(dot)digitalsolver@gmail.com
