@@ -40,7 +40,7 @@ A web application built with HTML, CSS, and JavaScript that loads data from an e
 2. Navigate to the project directory: `cd pokedex-app`
 3. Open the `index.html` file in a web browser
 
-## Usage
+## Usage
 
 1. Load the app in a web browser
 2. View the list of Pokémon
