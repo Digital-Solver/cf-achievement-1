@@ -1,5 +1,7 @@
 # Pokedex App
 
+Live app: https://digital-solver.github.io/pokedex-app/
+
 Explore the original list of 151 Pokemon, click on each one to see the details, and find for your favourites using the search feature.
 
 A web application built with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail. This app displays a list of Pokémon and allows users to view more details for a given Pokémon on demand.
